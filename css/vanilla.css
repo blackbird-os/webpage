@@ -1,0 +1,378 @@
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+* {
+    box-sizing: border-box;
+}
+
+::-moz-selection {
+    color: #222;
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    color: #222;
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+
+:root {
+    --desktop-font-size: 1.2rem/1.4;
+    --mobile-font-size: 1.1rem/1.4;
+    --text-color: #222;
+    --heading-color: #111;
+    --link-color: #1972CD;
+    --link-hover-color: #3E91E7;
+    --primary-color: #fff;
+    --secondary-color: #e3e7ed;
+    --tertiary-color: #444;
+    --accent-color: #B4D9FF;
+}
+
+
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+body { 
+    color: var(--text-color);
+    font: var(--mobile-font-size) -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto, Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+h1,h2,h3,h4,h5,h6,p,blockquote,dl,img,figure {
+    margin: 2rem 0;
+}
+
+h1,h2,h3,h4,h5,h6 { font-weight: bold; color: var(--heading-color); }
+h1 { font-size: 250%; }
+h2 { font-size: 220%; }
+h3 { font-size: 140%; }
+h4 { font-size: 110%; }
+h5, h6 { font-size: 100%; }
+h4, h6 { text-transform: uppercase; }
+
+header h1 { border-bottom: 1px solid; }
+
+p { margin: 2rem 0; }
+
+a,a:visited { color: var(--link-color); text-decoration: none; }
+a:hover { color: var(--link-hover-color); }
+
+strong, time, b { font-weight: bold; }
+em, dfn, i { font-style: italic; }
+sub { font-size: 60%; vertical-align: bottom; }
+small { font-size: 70%; }
+
+blockquote, q {
+    border-top: 2px solid var(--secondary-color);
+    border-right: 2px solid var(--secondary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    border-left: 20px solid var(--secondary-color);
+    border-radius: 6px;
+    font-family: "Georgia", serif; 
+    padding: 1rem;
+}
+blockquote p:first-child { margin-top: 0; }
+cite { 
+    font-family: "Georgia", serif; 
+    font-style: italic;
+    font-weight: bold;
+}
+
+kbd,code,samp,pre,var { font-family: monospace; font-weight: bold; }
+
+code pre , pre code { padding: 0; }
+
+
+
+/* ==========================================================================
+   Logomark
+   ========================================================================== */
+
+.logomark {
+    display: inline-block;
+    line-height: 12px;
+    vertical-align: middle;
+}
+.logomark img { max-height: 30px; margin: 0; }
+
+.header {
+    color: var(--primary-color);
+    display: table;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 48px;
+    position: fixed;
+    max-width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: var(--heading-color);
+}
+
+.header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header ul li { display: inline-block; padding: 0 12px; }
+
+.header .nav li:first-of-type { display: block; }
+
+.header .nav, .footer .nav {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.header a, .header a:link, .header a:focus, .header a:active, .header a:visited {
+    color: var(--primary-color);
+}
+
+.header a:hover {
+  color: var(--link-hover-color);
+}
+
+.header span {
+    font-size: 12px;
+    line-height: 12px;
+    color: var(--text-color);
+    background: #B4D9FF;
+    padding: 6px 6px 2px 6px;
+    border-radius: 3px;
+    margin-right: 2px;
+}
+
+
+/* ==========================================================================
+   Elements
+   ========================================================================== */
+
+hr {
+    background: var(--secondary-color);
+    border: 0;
+    height: 1px;
+    margin: 4rem 0;
+}
+
+img { max-width: 100%; font-family: monospace; }
+
+a img, a:link img, a:visited img { border: 0; }
+
+figure { 
+    border: 1px solid var(--primary-color);
+    display: inline-block;
+    padding: 1rem; 
+    width: auto;
+}
+figure img { margin: 0; }
+figure figcaption { font-size: 80%; }
+
+ul, ol { margin: 2rem 0; padding: 0 0 0 2rem; }
+
+dl dd { padding-left: 2rem; }
+
+table {
+    border: 1px solid var(--primary-color);
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%; 
+}
+table caption { margin: 2rem 0; }
+table thead { text-align: center; }
+table tbody { text-align: right; }
+table tr { border-bottom: 1px solid var(--primary-color); }
+table tbody tr:nth-child(even) { background: var(--tertiary-color); }
+table th { background: var(--secondary-color); font-weight: bold; }
+table th, table td { padding: 1rem; }
+table th:not(last-of-type), table td:not(last-of-type) { border-right: 1px solid var(--primary-color); }
+
+
+/* ==========================================================================
+   Custom Elements
+   ========================================================================== */
+
+.intro h2, .intro p { max-width: 620px; margin: 0 auto; }
+
+.info { color: var(--tertiary-color); }
+
+.sha { word-wrap: break-word; display: block; }
+
+.align-center { text-align: center; }
+
+.anchor { padding-top: 160px; margin-top: -160px; }
+
+.dl-links {
+  font-size: 90%;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .03em;
+}
+
+.dl-links a, .dl-links a:link, .dl-links a:focus {
+    display: inline-block;
+    color: var(--primary-color);
+    background: var(--link-color);
+    padding: 14px 18px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+    border-radius: 6px;
+    line-height: 24px;
+    text-align: center;
+    width: 100%;
+    max-height: 46px;
+}
+
+.dl-links a:hover, .dl-links a:active { background: var(--link-hover-color); }
+
+.dl-links .invert, .dl-links .invert:link { color: var(--link-color); background: var(--secondary-color); }
+
+.dl-links .invert:hover, .dl-links .invert:active { color: var(--text-color) !important; background: var(--secondary-color); }
+
+.rounded, .rounded a { border-radius: 30px !important; }
+
+.block {
+    padding: 20px;
+    border-radius: 6px;
+    border: 2px solid var(--secondary-color);
+}
+
+.row {
+    display: inline-block;
+    width: 100%;
+    clear: both;
+}
+
+.column {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+}
+
+.column p { margin: 0; }
+
+
+.ver-num {
+    color: var(--heading-color);
+    background: var(--primary-color);
+    font-size: 124px;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    mix-blend-mode: lighten;
+}
+
+.ver-num-bg {
+    background: url(../media/readme/clip-bg.jpg);
+    background-size: cover;
+    background-position: fixed;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+}
+
+
+/* ==========================================================================
+   Sections
+   ========================================================================== */
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 90px 0;
+}
+
+.section-art,
+.section-article {
+    position: relative;
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px 0;
+    clear: both;
+}
+
+.section-art { max-width: 1280px; }
+
+.section-article { max-width: 800px; }
+
+.section-art img, .section-article img { width: 100%; border-radius: 6px; display: inline-block; text-align: center;}
+
+.section-article img { margin: 20px 0; }
+
+.margin-0 { margin: 0; }
+
+/* ==========================================================================
+   Mobile Styling
+   ========================================================================== */
+
+@media screen and (min-width: 600px) {
+    body {
+        font: var(--desktop-font-size) -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto, Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol"
+    }
+    
+    .header .nav li:first-of-type { display: inline-block; }
+    
+    .header .nav-aside {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: right;
+        
+    }
+    
+    .container { padding: 120px auto 0 auto; }
+    
+    .anchor { padding-top: 120px; margin-top: -120px; }
+    
+    .block { padding: 40px; }
+    
+    .column {
+        float: left;
+        width: 40%;
+        margin-right: 10%;
+    }
+    
+    .single {
+        display: block;
+        clear: both;
+        margin-bottom: 20px;
+     }
+     
+     .dl-links a, .dl-links a:link, .dl-links a:focus { text-align: left; width: auto; }
+     
+     .dl-links-centered, .dl-links-centered a { margin-left: 16px;}
+}
